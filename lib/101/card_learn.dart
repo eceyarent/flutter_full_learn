@@ -4,39 +4,37 @@ class CardLearn extends StatelessWidget {
   const CardLearn({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Column(
-        children: [
-          Card(
-            margin: ProjectMargin.cardMargin,
-            child: SizedBox(
-              height: 100,
-              width: 300,
-              child: Center(child: Text('data')),
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(),
+        body: Column(
+          children: [
+            Card(
+              margin: ProjectMargin.cardMargin,
+              child: SizedBox(
+                height: 100,
+                width: 300,
+                child: Center(child: Text('data')),
+              ),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
             ),
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-          ),
-          _CustomCard(
-            child: SizedBox(
-              height: 100,
-              width: 300,
-              child: Center(child: Text('data')),
+            _CustomCard(
+              child: SizedBox(
+                height: 100,
+                width: 300,
+                child: Center(child: Text('data')),
+              ),
             ),
-          ),
-          _CustomCard(
-            child: SizedBox(
-              height: 100,
-              width: 300,
-              child: Center(child: Text('data')),
-            ),
-          )
-        ],
-      ),
-    );
-  }
+            _CustomCard(
+              child: SizedBox(
+                height: 100,
+                width: 300,
+                child: Center(child: Text('data')),
+              ),
+            )
+          ],
+        ),
+      );
 }
 
 class ProjectMargin {
@@ -49,11 +47,9 @@ class _CustomCard extends StatelessWidget {
   final roundedRectangleBorder =
       RoundedRectangleBorder(borderRadius: BorderRadius.circular(10));
   @override
-  Widget build(BuildContext context) {
-    return Card(
-      margin: ProjectMargin.cardMargin,
-      child: child,
-      shape: roundedRectangleBorder,
-    );
-  }
+  Widget build(BuildContext context) => Card(
+        margin: ProjectMargin.cardMargin,
+        child: child,
+        shape: roundedRectangleBorder,
+      );
 }

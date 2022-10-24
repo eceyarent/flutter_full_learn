@@ -6,23 +6,21 @@ class IconLearnView extends StatelessWidget {
   final IconColors iconColors = IconColors();
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('hello'),
-      ),
-      body: Column(
-        children: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.message_outlined),
-            color: IconColors().froly,
-            iconSize: IconSizes().iconsmall,
-          ),
-        ],
-      ),
-    );
-  }
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          title: const Text('hello'),
+        ),
+        body: Column(
+          children: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.message_outlined),
+              color: IconColors().froly,
+              iconSize: IconSizes().iconsmall,
+            ),
+          ],
+        ),
+      );
 }
 
 class IconSizes {
