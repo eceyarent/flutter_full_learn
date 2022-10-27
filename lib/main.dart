@@ -1,22 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-//import 'package:flutter_full_learn/101/app_bar_learn.dart';
-//import 'package:flutter_full_learn/101/button_learn.dart';
-//import 'package:flutter_full_learn/101/card_learn.dart';
+
 import 'package:flutter_full_learn/101/color_learn.dart';
-//import 'package:flutter_full_learn/101/column_row_learn.dart';
-import 'package:flutter_full_learn/demos/stack_demo_view.dart';
-//import 'package:flutter_full_learn/101/container_sized_box_learn.dart';
-//import 'package:flutter_full_learn/101/custom_widget_learn.dart';
-//import 'package:flutter_full_learn/101/icon_learn.dart';
-//import 'package:flutter_full_learn/101/image_learn.dart';
-//import 'package:flutter_full_learn/101/indicator_learn.dart';
-//import 'package:flutter_full_learn/101/list_tile_learn.dart';
-//import 'package:flutter_full_learn/101/padding_learn.dart';
-//import 'package:flutter_full_learn/101/scaffold_learn.dart';
-//import 'package:flutter_full_learn/101/stateless_learn.dart';
-//import 'package:flutter_full_learn/101/text_learn_view.dart';
-//import 'package:flutter_full_learn/demos/note_demos_view.dart';
+import 'package:flutter_full_learn/101/text_field_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,28 +19,22 @@ class MyApp extends StatelessWidget {
           progressIndicatorTheme:
               const ProgressIndicatorThemeData(color: Colors.white),
           errorColor: ColorsItems().sulu,
+          inputDecorationTheme: const InputDecorationTheme(
+              filled: true,
+              fillColor: Colors.white,
+              iconColor: Colors.red,
+              labelStyle: TextStyle(color: Colors.lime),
+              border: OutlineInputBorder(),
+              floatingLabelStyle: TextStyle(
+                  color: Colors.red,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600)),
+          textTheme: const TextTheme(subtitle1: TextStyle(color: Colors.red)),
           appBarTheme: const AppBarTheme(
-              centerTitle: true,
-              backgroundColor: Colors.transparent,
-              elevation: 0,
-              systemOverlayStyle: SystemUiOverlayStyle.light)),
-      home: const StackDemoView()
-      //StackLearn()
-      //ColumnRowLearn()
-      //ListTilelearn()
-      //IndicatorLearn()
-      //CustomWidgetLearn()
-      //NoteDemos()
-      // ImageLearn()
-      //CardLearn()
-      //PaddingLearn()
-      //StatelessLearn()
-      //ColorLearn()
-      //IconLearnView()
-      //AppBarLearnView()
-      //ButtonLearn(),
-      //ScaffoldLearnView(),
-      // TextLearnView(),
-      // ContainerSizedBoxLearn(),
-      );
+            centerTitle: true,
+            systemOverlayStyle: SystemUiOverlayStyle.light,
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+          )),
+      home: const TextFieldLearn());
 }
