@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:flutter_full_learn/101/color_learn.dart';
-import 'package:flutter_full_learn/demos/my_collections_demos.dart';
+import 'package:flutter_full_learn/202/model_learn_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +16,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData.dark().copyWith(
+          // tabBarTheme: const TabBarTheme(
+          //   labelColor: Colors.white,
+          //   unselectedLabelColor: Colors.red,
+          //   indicatorSize: TabBarIndicatorSize.label,
+
+          // ),
+          //bottomAppBarTheme: const BottomAppBarTheme(shape: CircularNotchedRectangle()),
           progressIndicatorTheme:
               const ProgressIndicatorThemeData(color: Colors.white),
           errorColor: ColorsItems().sulu,
@@ -36,5 +43,5 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0,
           )),
-      home: const MyCollectionsDemos());
+      home: const ModelLearnView());
 }
