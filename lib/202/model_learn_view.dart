@@ -20,20 +20,20 @@ class _ModelLearnViewState extends State<ModelLearnView> {
     final user2 = PostModel2(1, 2, 'a', 'b');
     user2.body = 'a';
 
-    final user3 = PostModel3(1, 2, 'a', 'b');
+    // final user3 = PostModel3(1, 2, 'a', 'b');
     //user3.body = 'a'; //Localde yapıyorsak daha iyi kullanımlar 1 2 3 4
 
-    final user4 = PostModel4(userId: 1, id: 2, title: 'a', body: 'b');
+    // final user4 = PostModel4(userId: 1, id: 2, title: 'a', body: 'b');
     // user4.body = 'a';
 
     final user5 = PostModel5(userId: 1, id: 2, title: 'a', body: 'b');
     user5.userId;
 
-    final user6 = PostModel6(userId: 1, id: 2, title: 'a', body: 'b');
+    //final user6 = PostModel6(userId: 1, id: 2, title: 'a', body: 'b');
 
-    final user7 = PostModel7();
+    // final user7 = PostModel7();
 
-    final user8 = PostModel8(); //servisten data çekerken en iyi kullanım
+    // final user8 = PostModel8(); //servisten data çekerken en iyi kullanım
   }
 
   @override

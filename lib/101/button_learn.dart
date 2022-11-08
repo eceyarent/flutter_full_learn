@@ -9,14 +9,15 @@ class ButtonLearn extends StatelessWidget {
         body: Column(
           children: [
             TextButton(
-              child: Text('save', style: Theme.of(context).textTheme.subtitle1),
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.resolveWith((states) {
                 if (states.contains(MaterialState.pressed)) {
                   return Colors.green;
                 }
+                return null;
               })),
               onPressed: () {},
+              child: Text('save', style: Theme.of(context).textTheme.subtitle1),
             ),
             ElevatedButton(
               onPressed: () {},
@@ -63,7 +64,7 @@ class ButtonLearn extends StatelessWidget {
             ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.black,
+                    backgroundColor: Colors.black,
                     shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10)))),
                 onPressed: () {},

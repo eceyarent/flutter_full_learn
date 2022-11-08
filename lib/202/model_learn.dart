@@ -49,6 +49,9 @@ class PostModel5 {
   final String _body;
 
   int get userId => _userId;
+  int get id => _id;
+  String get title => _title;
+  String get body => _body;
 }
 
 class PostModel6 {
@@ -67,6 +70,11 @@ class PostModel6 {
   late final int _id;
   late final String _title;
   late final String _body;
+
+  int get userId => _userId;
+  int get id => _id;
+  String get title => _title;
+  String get body => _body;
 }
 
 class PostModel7 {
@@ -85,6 +93,11 @@ class PostModel7 {
   late final int _id;
   late final String _title;
   late final String _body;
+
+  int get userId => _userId;
+  int get id => _id;
+  String get title => _title;
+  String get body => _body;
 }
 
 class PostModel8 {

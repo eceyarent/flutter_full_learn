@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:flutter_full_learn/101/color_learn.dart';
-import 'package:flutter_full_learn/202/model_learn_view.dart';
+import 'package:flutter_full_learn/202/service/service_learn_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
           //   indicatorSize: TabBarIndicatorSize.label,
 
           // ),
-          //bottomAppBarTheme: const BottomAppBarTheme(shape: CircularNotchedRectangle()),
+          //bottomAppBarTheme: const BottomAppBarTheme
+          //(shape: CircularNotchedRectangle()),
           progressIndicatorTheme:
               const ProgressIndicatorThemeData(color: Colors.white),
           errorColor: ColorsItems().sulu,
@@ -43,5 +44,5 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0,
           )),
-      home: const ModelLearnView());
+      home: const ServisLearn());
 }

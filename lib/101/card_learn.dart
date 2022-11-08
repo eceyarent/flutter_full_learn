@@ -10,13 +10,13 @@ class CardLearn extends StatelessWidget {
           children: [
             Card(
               margin: ProjectMargin.cardMargin,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
               child: SizedBox(
                 height: 100,
                 width: 300,
                 child: Center(child: Text('data')),
               ),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
             ),
             _CustomCard(
               child: SizedBox(
@@ -49,7 +49,7 @@ class _CustomCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Card(
         margin: ProjectMargin.cardMargin,
-        child: child,
         shape: roundedRectangleBorder,
+        child: child,
       );
 }
