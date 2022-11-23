@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/202/animated_learn.dart';
+import 'package:flutter_full_learn/202/form_learn_view.dart';
 
 import 'package:flutter_full_learn/202/theme/light_theme.dart';
 
@@ -43,6 +43,6 @@ class MyApp extends StatelessWidget {
         //   systemOverlayStyle: SystemUiOverlayStyle.light,
         //   backgroundColor: Colors.transparent,
         //   elevation: 0, )
-        home: const AnimatedLearn(),
+        home: const FormLearnView(),
       );
 }
