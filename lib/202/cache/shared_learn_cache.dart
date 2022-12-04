@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_full_learn/202/cache/shared_manager.dart';
 
 class SharedLearn extends StatefulWidget {
   const SharedLearn({super.key});
@@ -10,16 +10,28 @@ class SharedLearn extends StatefulWidget {
 
 class _SharedLearnState extends LoadingStatefull<SharedLearn> {
   int _currentValue = 0;
+  late final SharedManager _manager;
   @override
   void initState() {
     super.initState();
+    _manager = SharedManager();
+    _initialze();
+
     getDefaultValues();
   }
 
+  Future<void> _initialze() async {
+    _changeLoading();
+    await _manager.init();
+    _changeLoading();
+
+    await getDefaultValues();
+  }
+
   Future<void> getDefaultValues() async {
-    final prefs = await SharedPreferences.getInstance();
-    final counter = prefs.getInt('counter');
-    _onChangeValue(counter.toString());
+    // final prefs = await SharedPreferences.getInstance();
+    // final counter = prefs.getInt('counter');
+    _onChangeValue(_manager.getString(SharedKeys.counter) ?? '');
   }
 
   void _onChangeValue(String value) {
@@ -64,8 +76,9 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
         child: Icon(Icons.save),
         onPressed: () async {
           _changeLoading();
-          final prefs = await SharedPreferences.getInstance();
-          await prefs.setInt('counter', _currentValue);
+          await _manager.saveString(
+              SharedKeys.counter, _currentValue.toString());
+          _changeLoading();
         },
       );
 
@@ -73,10 +86,8 @@ class _SharedLearnState extends LoadingStatefull<SharedLearn> {
         child: Icon(Icons.remove),
         onPressed: () async {
           _changeLoading();
-          final prefs = await SharedPreferences.getInstance();
-          await prefs.remove(
-            'counter',
-          );
+          await _manager.removeItem(SharedKeys.counter);
+          _changeLoading();
         },
       );
 }
